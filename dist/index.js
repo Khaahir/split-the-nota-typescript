@@ -1,0 +1,21 @@
+"use strict";
+let sum = document.getElementById("sum");
+let numberOfFriends = document.getElementById("numberOfFriends");
+let tip = document.getElementById("tip");
+let calculateButton = document.getElementById("calculateButton");
+let form = document.getElementById("inputForm");
+let showSum = document.getElementById("showSum");
+let showtotal = document.querySelector(".show-sum");
+let totaldivided;
+let total;
+let finalsum;
+calculateButton.addEventListener("click", () => {
+    totaldivided = parseInt(sum.value) / parseInt(numberOfFriends.value) * parseFloat(tip.value);
+    total = parseInt(sum.value) / parseInt(numberOfFriends.value);
+    console.log(totaldivided);
+    finalsum = totaldivided + total;
+    console.log(finalsum);
+    showtotal.innerText = `${finalsum} kr`;
+    form === null || form === void 0 ? void 0 : form.classList.add("hide");
+    showSum === null || showSum === void 0 ? void 0 : showSum.classList.remove("hide");
+});
